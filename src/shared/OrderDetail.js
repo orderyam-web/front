@@ -37,6 +37,15 @@ export default class OrderDetail extends Component{
         
     }
 
+    kakaoHandleClick() {
+        // do something meaningful, Promises, if/else, whatever, and then
+        window.location.assign('http://localhost:3001/kakaopay');
+    }
+
+    inicisHandleClick() {
+        // do something meaningful, Promises, if/else, whatever, and then
+        window.location.assign('http://localhost:8080/local_inicis/INIStdPayRequest.jsp');
+    }
     
        
         
@@ -62,8 +71,8 @@ export default class OrderDetail extends Component{
 
                     </div>
                     <div className={checkstyle.text2}>결제수단 선택</div>
-                    <img src={kakao}className={checkstyle.kakao} ></img>
-                    <img src={card} className={checkstyle.card} ></img>
+                    <img src={kakao}className={checkstyle.kakao} onClick={this.kakaoHandleClick.bind(this)}></img>
+                    <img src={card} className={checkstyle.card} onClick={this.inicisHandleClick.bind(this)}></img>
                     <Paymentpage></Paymentpage>
                     </div>
             
