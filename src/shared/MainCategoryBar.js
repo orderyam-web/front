@@ -45,11 +45,11 @@ class TabSelectionSliderContainer extends React.Component{
         for(let i in this.props.category){
             if(i===this.categorycount){
                
-                this.showPill=true;
+                
             innerContent.push(<TabSelectionSliderElement   text={this.props.category[i]} showPill/>);
         }
         else{
-            this.showPill=false;
+            
             
             innerContent.push(<TabSelectionSliderElement  text={this.props.category[i]} false/>);
         }

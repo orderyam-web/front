@@ -1,7 +1,7 @@
 .text1 {
     width: 80%;
     margin-left: 10%;
-    margin-top: -25%;
+    margin-top: -100px;
     font-size: 18px;
     font-weight: 500;
     font-stretch: normal;
@@ -13,7 +13,7 @@
 }
 .phonebox{
     position: relative;
-    margin-top: 5%;
+    margin-top: 8%;
     width: 90%;
     margin-left: 10%;
 }
@@ -31,7 +31,7 @@
 .text2 {
     width: 80%;
     margin-left: 10%;
-    margin-top: 7%;
+    margin-top: 10%;
     font-size: 18px;
     font-weight: 500;
     font-stretch: normal;
@@ -43,23 +43,23 @@
 }
 .kakao {
     margin-left: 13%;
-    margin-top: 5%;
+    margin-top: 8%;
     border-width: 4px;
     border-color:#f07987;
     border-radius: 65px;
 }
 .card {
     margin-left: 10%;
-    margin-top: 5%;
+    margin-top: 8%;
     border-width: 4px;
     border-color:#f07987;
     border-radius: 65px;
 }
 .pay {
     width: 80%;
-    height: 25%;
+    height: 80px;
     margin-left: 10%;
-    margin-top: 5%;
+    margin-top: 30px;
     border-radius: 10px;
     box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.32);
     background-color: #ed5472;
@@ -83,17 +83,18 @@
 }
 .backbox {
     width: 350px;
-    height: 600px;
+   
     border-radius: 15px;
     box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.16);
     background-color: white;
     color: rgba(0,0,100%,1);
     position: fixed;
-    margin-left: 40%;
-    margin-right: 5%;
-    height: 300px;
+    
+    margin-right: -170px;
+    height: 350px;
     top: 50%;
-    margin-top: -200px;
+    margin-top: -250px;
     padding-top: 10%;
     opacity: 1;
+    right:50%;
 }
