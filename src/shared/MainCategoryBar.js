@@ -41,7 +41,7 @@ class TabSelectionSliderContainer extends React.Component{
         this.setState({
             categorycount:id,
         })
-        alert(id)
+        
     } ;
 
     render(){

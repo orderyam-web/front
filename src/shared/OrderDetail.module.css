@@ -1,4 +1,4 @@
-.text1 {
+.requirephonenum {
     width: 80%;
     margin-left: 10%;
     margin-top: -100px;
@@ -28,7 +28,7 @@
     border: solid 2px #f9d9dd;
     text-align: center;
 }
-.text2 {
+.selectpaytool {
     width: 80%;
     margin-left: 10%;
     margin-top: 10%;
@@ -55,7 +55,7 @@
     border-color:#f07987;
     border-radius: 65px;
 }
-.pay {
+.paybox {
     width: 80%;
     height: 80px;
     margin-left: 10%;
@@ -65,7 +65,7 @@
     background-color: #ed5472;
     text-align: center center;
 }
-.text3 {
+.finalpay {
     margin-left: 28%;
     margin-top: 6%;
     font-family: NotoSansCJKkr;
