@@ -8,7 +8,7 @@
     margin-left: 10%;
     margin-top:3%;
     font-family: NotoSansCJKkr;
-    font-size: 60px;
+    font-size: 55px;
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -23,7 +23,7 @@
 }
 
 .line{
-        margin-top:2%;
+        margin-top:3%;
         margin-left: 10%;
         margin-right: 10%;
         background-color: #ffffff;
@@ -68,6 +68,7 @@
     letter-spacing: normal;
     text-align: center;
     color: #414141;
+    margin-top: 1%;
   
   }
   .Container{
