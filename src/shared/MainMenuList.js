@@ -23,7 +23,8 @@ export default class MainMenuList extends Component{
                     image: americano,
                     options: [{title:"사이즈 선택", option : new Map([['Regular', 0],['Large', 800]]) , type : 'bullet'}, 
                               {title:"옵션", option : new Map([['샷 추가', 800], ['시럽 추가', 500], ['휘핑 추가', 600]]), type:"check"}
-                    ]
+                    ],
+                    soldout : false,
                 }
             ),
             new GlobalMainMenuItem(
@@ -35,7 +36,8 @@ export default class MainMenuList extends Component{
                     image: caffelatte,
                     options: [{title:"사이즈 선택", option : new Map([['Regular', 0],['Large', 800]]) , type : 'bullet'}, 
                               {title:"옵션", option : new Map([['샷 추가', 800], ['시럽 추가', 500], ['휘핑 추가', 600]]), type:"check"}
-                    ]
+                    ],
+                    soldout : false,
                 }
             ),
             new GlobalMainMenuItem(
@@ -47,7 +49,8 @@ export default class MainMenuList extends Component{
                     image: caramel,
                     options: [{title:"사이즈 선택", option : new Map([['Regular', 0],['Large', 800]]) , type : 'bullet'},
                               {title:"옵션", option : new Map([['샷 추가', 800], ['시럽 추가', 500], ['휘핑 추가', 600]]), type:"check"}
-                    ]
+                    ],
+                    soldout : true,
                 }
             ),
             ]
@@ -58,7 +61,7 @@ export default class MainMenuList extends Component{
         for (const item in this.state.menu_list){
             const what = this.state.menu_list[item];
             innerContent.push(<MainMenuElement title={what.state.title} description={what.state.description} price={what.state.price}
-                image={what.state.image} options={what.state.options}/>);
+                image={what.state.image} options={what.state.options} soldout={what.state.soldout}/>);
         }
         return(
             <div className={styles.Background}>
