@@ -8,6 +8,7 @@ import logo from './mark3.png';
 import { connect } from 'react-redux';
 //import { addMenu } from './store/modules/menuList';
 import orderNumber from './orderNumber.js';
+import DetailAppBar from './DetailAppBar.js';
 class Origin extends Component{
     constructor(props){
         super(props);
@@ -16,33 +17,25 @@ class Origin extends Component{
     
     
     render(){
-        var d=new Date();
-        if(d.getHours()>12){
-            var timecut="오후";
-            var dhour=d.getHours()-12;
-        }
-        else{
-            var timecut="오전";
-            var dhour=d.getHours()
-        }
-        let ordername = this.props.menulist.concat({name:'null'})[0];
-        var ordernumber = orderNumber.getInstance();
-        var ordernum = ordernumber.getID();
-
+ 
         return(
             <Fragment>
-            <img className={checkstyle.logo} src={logo}></img>
-            <div className={checkstyle.ordercompleteattention}>주문이 완료<div className={checkstyle.text2}>되었습니다!</div></div>
-            <hr className={checkstyle.line}></hr>
-            <div className={checkstyle.ordernum}>주문번호</div>
-            <div className={checkstyle.number}>{ordernum}</div>
-            <hr className={checkstyle.line}></hr>
-            <div className={checkstyle.info}>카페드림 중앙대점</div>
-            <div className={checkstyle.info}>{ordername.name} 외 {Number(this.props.menucount) - 1}개</div>
-            <div className={checkstyle.info}>{d.getFullYear()}-{(d.getMonth())+1}-{d.getDate()} {timecut} {dhour}:{d.getMinutes()}</div>
-            <Link to= './'>
-            <div className={checkstyle.Container}>메인페이지로 이동</div>
-            </Link>
+            <DetailAppBar title="원산지 및 사업자 정보"></DetailAppBar>
+            <div className={checkstyle.backbox}>
+            <div className={checkstyle.companynamebox}>
+                상호명</div>
+            <div className={checkstyle.companynumber}>
+                사업자번호
+            </div>
+            <div className={checkstyle.wherefrom}>
+                원산지정보
+            </div>
+            <div className={checkstyle.representname}>
+                대표자명
+            </div>
+                
+                </div>
+
             
             </Fragment>
         )
