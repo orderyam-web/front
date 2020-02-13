@@ -16,7 +16,7 @@ export default class MainMenuElement extends Component{
         
 ];
         return(
-            <Link to={{pathname:'/menu/'.concat(this.props.title),
+            <Link to={this.props.soldout ? 1 : {pathname:'/menu/'.concat(this.props.title),
             state:{
                 menu_id:this.props.title,
                 description:this.props.description,

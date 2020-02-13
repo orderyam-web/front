@@ -6,7 +6,8 @@ export default class GlobalMainMenuItem{
             description: props.description,
             price: props.price,
             image: props.image,
-            options: props.options
+            options: props.options,
+            soldout: props.soldout
         };
     }
 }

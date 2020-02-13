@@ -62,7 +62,7 @@ class OrderDetail extends Component{
             this.inicisHandleClick()
         }
         else{
-            alert('error!')
+            alert('결제수단을 선택해주세요!')
         }
     }
        

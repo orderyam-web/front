@@ -43,13 +43,13 @@
 }
 .soldout{
     border-style: solid;
-    width:50px;
-    height:25px;
+    width:70px;
+    height:40px;
    
     margin-top:10px;
     float:right;
     position: absolute;
-    right:6%;
+    right:7%;
     border-color:#d20c23;
     color: #d20c23;
     transition: 0.5s all ease;
@@ -57,5 +57,5 @@
     -webkit-transform: rotate(330deg); 
     transform: rotate(330deg);
     text-align: center;
-    font-size: 20px;
+    font-size: 30px;
 }
