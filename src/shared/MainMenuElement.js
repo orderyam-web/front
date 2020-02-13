@@ -21,11 +21,15 @@ export default class MainMenuElement extends Component{
                 menu_id:this.props.title,
                 description:this.props.description,
                 price:this.props.price,
-                options:this.props.options
+                options:this.props.options,
+                soldout:this.props.soldout
             }}} style={{ textDecoration: 'none' }}>
-                <div className={this.props.soldout ? styles.Container : styles.Container}>
+                <div className={this.props.soldout ? styles.Containersoldout : styles.Container}>
                     <div className={styles.Title}>{this.props.title}
-                    <img src={this.props.image} className={styles.Image} ></img></div>
+                    <img src={this.props.image} className={styles.Image} >
+                    
+                    </img>
+                    <div  className={styles.soldout} style={this.props.soldout ? {display : 'block'} : {display : 'none'}}>매진 </div></div>
                     <div className={styles.Description}>{this.props.description}</div>
                     <div className={styles.Price}>{this.props.price}</div>
                 </div>
