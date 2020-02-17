@@ -1,20 +1,14 @@
 import React, { Component, Fragment } from 'react';
-import ReactDOM from 'react-dom';
-// import './global.css';
-import * as serviceWorker from '../serviceWorker';
-import {Link} from "react-router-dom";
 import checkstyle from './origin.module.css';
-import logo from './mark3.png';
 import { connect } from 'react-redux';
 //import { addMenu } from './store/modules/menuList';
-import orderNumber from './orderNumber.js';
 import DetailAppBar from './DetailAppBar.js';
 class Origin extends Component{
     constructor(props){
         super(props);
     }
    
-    
+//사업자 정보 관련 페이지입니다, DB에서 관련 정보 받아서 출력구현만 하면 됩니다!
     
     render(){
  

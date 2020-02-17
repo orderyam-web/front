@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import './global.css';
-import * as serviceWorker from '../serviceWorker';
-
 import styles from './OrderCentralSelection.module.css';
-import DetailDivision from './DetailDivision'
-import OrderCell from './OrderCell';
 import { connect } from 'react-redux';
 import MenuListContainer from './container/MenuListContainer';
 
