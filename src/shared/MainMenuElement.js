@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import './global.css';
-import * as serviceWorker from '../serviceWorker';
 import {Link, Route, Switch} from 'react-router-dom';
 
 import styles from './MainMenuElement.module.css';
@@ -22,7 +20,8 @@ export default class MainMenuElement extends Component{
                 description:this.props.description,
                 price:this.props.price,
                 options:this.props.options,
-                soldout:this.props.soldout
+                soldout:this.props.soldout,
+                image:this.props.image
             }}} style={{ textDecoration: 'none' }}>
                 <div className={this.props.soldout ? styles.Containersoldout : styles.Container}>
                     <div className={styles.Title}>{this.props.title}
