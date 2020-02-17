@@ -1,7 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import ReactDOM from 'react-dom';
 import './global.css';
-import * as serviceWorker from '../serviceWorker';
 import { connect } from 'react-redux';
 
 import checkstyle from './OrderDetail.module.css';
@@ -106,3 +104,4 @@ const mapStateToProps = ({ menuList}) => ({  //2
 export default connect ( // 스토어와 연결
     mapStateToProps,
 )(OrderDetail) ;
+ 

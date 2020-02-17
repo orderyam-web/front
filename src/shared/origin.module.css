@@ -12,16 +12,9 @@
     margin-left: 10%;
     margin-top:60px;
     text-indent:15px;
-    height:60px;
-    top:50%;
     font-family: NotoSansCJKkr;
     font-size: 20px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
     line-height: 3;
-    letter-spacing: normal;
-    text-align: left;
     color: #2c2c2c;
     left:50%;
     
@@ -31,61 +24,36 @@
     width:80%;
     margin-left: 10%;
     margin-top:20px;
-    
     height:60px;
- 
     font-family: NotoSansCJKkr;
     font-size: 20px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
     line-height: 3;
-    letter-spacing: normal;
     text-indent:15px;
     color: #2c2c2c;
     left:50%;
-    
-  
-
 }
 
 .wherefrom{
-
     background-color: white;
     width:80%;
     margin-left: 10%;
     margin-top:20px;
-    
     height:180px;
- 
     font-family: NotoSansCJKkr;
     font-size: 20px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
     line-height: 3;
-    letter-spacing: normal;
     text-indent:15px;
-    color: #2c2c2c;
     left:50%;
-    
 }
 .representname{
-    
     background-color: white;
     width:80%;
     margin-left: 10%;
     margin-top:20px;
-    
     height:60px;
- 
     font-family: NotoSansCJKkr;
     font-size: 20px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
     line-height: 3;
-    letter-spacing: normal;
     text-indent:15px; 
     color: #2c2c2c;
     left:50%;
