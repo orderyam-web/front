@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from 'react';
+import ReactDOM from 'react-dom';
 import './global.css';
+import * as serviceWorker from '../serviceWorker';
 import { connect } from 'react-redux';
 
 import checkstyle from './OrderDetail.module.css';
@@ -9,9 +11,12 @@ import OrderBottomButton from './OrderBottomButton';
 import kakao from './kakao.png';
 import card from './card.png';
 import Paymentpage from './Paymentpage';
+import axios from 'axios';
+
 class OrderDetail extends Component{
     constructor(props){
         super(props);
+        
     }
     
     state = {
@@ -20,6 +25,7 @@ class OrderDetail extends Component{
         cellnum : 0,
         num :0,
         paymentStyle : '',
+        countValue : 0
     }
     savecellnum(){
         var cellnum = document.getElementById("cellnum").value;
@@ -38,10 +44,33 @@ class OrderDetail extends Component{
     }
 
     kakaoHandleClick = () => {
-        // do something meaningful, Promises, if/else, whatever, and then
-        window.location.assign('http://localhost:3001/kakaopay');
-    }
 
+        const user = {
+            price: Number(this.props.price),
+            count: Number(this.props.totalCount),
+            name: this.props.menulist.concat({name:'null'})[0].name
+        }
+
+        //const uri = {};
+
+        axios.post("http://localhost:5000/kakaopay", {
+            user
+        })
+        .then(res => {
+            const uri = res;
+            this.setState({uri});
+            window.location.assign(uri.data);
+            console.log(uri);
+        })
+        
+        // do something meaningful, Promises, if/else, whatever, and then
+    }
+/*
+    kakaoredirect = () => {
+        //window.location.assign('http://localhost:5000/kakaopay');
+        //window.location.assign('https://mockup-pg-web.kakao.com/v1/fd6aee731fbdeb640478bb00f9d1f56a00e0d2afda3fb70702093b0d5f89ccb3/info');
+    }
+*/
     inicisHandleClick = () => {
         // do something meaningful, Promises, if/else, whatever, and then
         window.location.assign('http://localhost:8080/local_inicis/INIStdPayRequest.jsp');
@@ -55,12 +84,13 @@ class OrderDetail extends Component{
     handlePaymentClick = () => {
         if (this.state.paymentStyle == 'kakao'){
             this.kakaoHandleClick()
+            //this.kakaoredirect()
         }
         else if (this.state.paymentStyle == 'inicis'){
             this.inicisHandleClick()
         }
         else{
-            alert('결제수단을 선택해주세요!')
+            alert('error!')
         }
     }
        
@@ -97,11 +127,12 @@ class OrderDetail extends Component{
     }
 }
 
-const mapStateToProps = ({ menuList}) => ({  //2
+const mapStateToProps = ({ counter, menuList }) => ({  //2
     menulist: menuList.list,
+    price: counter.price,
+    totalCount: menuList.totalCount
 }) ;
 
 export default connect ( // 스토어와 연결
     mapStateToProps,
 )(OrderDetail) ;
- 
